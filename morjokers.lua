@@ -25,6 +25,14 @@ SMODS.Atlas({
     py = 95
   })
 
+  SMODS.Atlas({
+    key = "ExtraBattery",
+    atlas_table = "ASSET_ATLAS",
+    path = "extra-battery.png",
+    px = 71,
+    py = 95
+  })
+
 local j_copymachine = SMODS.Joker{
 	name = "Copy Machine",
 	key = "copymachine",
@@ -320,7 +328,7 @@ local j_extrabattery = SMODS.Joker{
     discovered = false,
 	blueprint_compat = true,
 	perishable_compat = true,
-	atlas = "MorJokers",
+	atlas = "ExtraBattery",
 	loc_vars = function(self, info_queue, center)
 		return { vars = { center.ability.extra.repeats } }
 	end,
